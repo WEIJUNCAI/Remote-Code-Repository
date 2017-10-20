@@ -1,0 +1,80 @@
+
+<html>
+ <head>
+     <link rel="stylesheet" href="C:\Users\cgarr\OneDrive\Documents\OOD\RemoteCodeRepository\PublishedFiles\style.css">
+     <script src="C:\Users\cgarr\OneDrive\Documents\OOD\RemoteCodeRepository\PublishedFiles\collapse.js"></script>
+ </head>
+ <body>
+    <h3>CodePublisher.h</h3>
+    <hr />
+    <div class="indent">
+        <h4>Dependencies:</h4>
+         <p><a href="C:\Users\cgarr\OneDrive\Documents\OOD\RemoteCodeRepository\RepoStorage\Category1\CodePublisher.cpp.htm">CodePublisher.cpp</a></p>
+         <p><a href="C:\Users\cgarr\OneDrive\Documents\OOD\RemoteCodeRepository\RepoStorage\Category1\HTMLgenerator.h.htm">HTMLgenerator.h</a></p>
+    </div>
+    <hr />
+  <pre>
+#pragma once
+
+
+/////////////////////////////////////////////////////////////////////////////
+//  CodePublisher.h - publish source code in HTMLs                         //
+//  Language:     C++, VS 2015                                             //
+//  Platform:     SurfaceBook, Windows 10 Pro                              //
+//  Application:  Project1 for CSE687 - Object Oriented Design             //
+//  Author:       Weijun Cai                                               //
+/////////////////////////////////////////////////////////////////////////////
+/*
+*   Module Operations
+*   -----------------
+*   This module contains the delaration of the CodePublisher class,
+*   which can publish source code into the form of html files
+*/
+/*
+*   Build Process
+*   -------------
+*   - Required files: HTMLgenerator.h, HTMLgenerator.cpp
+*                     NoSqlDb.h
+*				      CodePublisher.h, CodePublisher.cpp
+*   Maintenance History
+*   -------------------
+*   ver 1.0 : 28 Mar 2017
+*/
+
+
+#include ../NoSqlDb/NoSqlDb.h
+#include ../HTMLgenerator/HTMLgenerator.h
+
+class CodePublisher
+<button id="btn33" onclick="collapse('body33', 'btn33')">-</button><span id="body33">{
+public:
+	// publish source file(s)
+	void PublishFile(Element&lt;std::string&gt;& file);
+	void PublishAll();
+	
+	// get/set various info to publish
+	void setFileInfo(NoSqlDb&lt;std::string&gt;* fileDB);
+	void setPublishPath(const std::string & path);
+	std::string getPublishPath();
+	void setStylePath(const std::string& path);
+	std::string getStylePath();
+	void setJavaScriptPath(const std::string& path);
+	std::string getJavaScriptPath();
+	// assemble HTML generator units
+	void configureHTMLgenerator();
+	// retrieve the name of all published HTML files
+	std::vector&lt;std::string&gt;& getHTMLfiles();
+
+private:
+	NoSqlDb&lt;std::string&gt;* srcFileInfo;
+	std::vector&lt;std::string&gt; publishedFiles;
+	HTMLgenerator htmlGenerator;
+	std::string pubPath;
+	std::string stylePath;
+	std::string jsPath;
+};</span>
+
+  </pre>
+
+ </body>
+</html>

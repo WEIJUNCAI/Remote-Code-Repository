@@ -1,0 +1,10 @@
+﻿  PassFunc.cpp
+c:\users\cgarr\onedrive\documents\ood\p2 help\graph\passfunct\passfunc.cpp(29): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  c:\users\cgarr\onedrive\documents\ood\p2 help\graph\passfunct\passfunc.cpp(36): note: see reference to function template instantiation 'void TestArgs<void(__cdecl *)(T)>(Arg)' being compiled
+          with
+          [
+              T=int,
+              Arg=void (__cdecl *)(int)
+          ]
+  PassFunct.vcxproj -> C:\Users\cgarr\OneDrive\Documents\OOD\P2 help\Graph\Debug\PassFunct.exe
+  PassFunct.vcxproj -> C:\Users\cgarr\OneDrive\Documents\OOD\P2 help\Graph\Debug\PassFunct.pdb (Full PDB)

@@ -1,0 +1,69 @@
+
+<html>
+ <head>
+     <link rel="stylesheet" href="C:\Users\cgarr\OneDrive\Documents\OOD\RemoteCodeRepository\PublishedFiles\style.css">
+     <script src="C:\Users\cgarr\OneDrive\Documents\OOD\RemoteCodeRepository\PublishedFiles\collapse.js"></script>
+ </head>
+ <body>
+    <h3>HTMLgenerator.h</h3>
+    <hr />
+    <div class="indent">
+        <h4>Dependencies:</h4>
+         <p><a href="C:\Users\cgarr\OneDrive\Documents\OOD\RemoteCodeRepository\RepoStorage\Category1\HTMLgenerator.cpp.htm">HTMLgenerator.cpp</a></p>
+    </div>
+    <hr />
+  <pre>
+#pragma once
+
+/////////////////////////////////////////////////////////////////////////////
+//  HTMLgenerator.h - generate HTML file                                   //
+//  Language:     C++, VS 2015                                             //
+//  Platform:     SurfaceBook, Windows 10 Pro                              //
+//  Application:  Project1 for CSE687 - Object Oriented Design             //
+//  Author:       Weijun Cai                                               //
+/////////////////////////////////////////////////////////////////////////////
+/*
+*   Module Operations
+*   -----------------
+*   This module contains the delaration of HTMLgenerator class, which
+*   can generate HTML using the composing HTML parts 
+*/
+/*
+*   Build Process
+*   -------------
+*   - Required files: IHTML.h
+*                     HTMLparts.h, HTMLparts.cpp
+*                     HTMLgenerator.h, HTMLgenerator.cpp
+*
+*   Maintenance History
+*   -------------------
+*   ver 1.0 : 28 Mar 2017
+*/
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include IHTML.h
+#include HTMLparts.h
+
+
+class HTMLgenerator : public IHTMLgenerator
+<button id="btn36" onclick="collapse('body36', 'btn36')">-</button><span id="body36">{
+public:
+	HTMLgenerator();
+
+	// interface implementation, generate complete html to specified output
+	void generateHTML(std::istream& input, std::ostream& output, const std::string& style, const std::string& js, Element&lt;std::string&gt;* info) override;
+	
+	// attach specified html generator parts to generator
+	void ConfigureGenerator();
+	void ConfigureGenerator(IHTMLhead* head, IHTMLbody* body);
+	~HTMLgenerator();
+private:
+	IHTMLhead* head;
+	IHTMLbody* body;
+};</span>
+  </pre>
+
+ </body>
+</html>
